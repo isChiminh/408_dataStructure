@@ -1,14 +1,14 @@
 #include <iostream>
-#include "include/datastructures/array_stack.hpp"
+#include "include/datastructures/linked_stack.hpp"
 
 using namespace datastructures;
 
 
 int main() {
     try {
-        ArrayStack stack(5);
+        LinkedStack stack;
 
-        std::cout << "Test start" << std::endl;
+        std::cout << "LinkedStack Test Start" << std::endl;
         std::cout << "Is the stack initially empty? " << std::boolalpha << stack.isEmpty() << std::endl;
 
         // Push elements
@@ -19,12 +19,10 @@ int main() {
 
         std::cout << "Current top element: " << stack.peek() << std::endl;
 
-        // Try pushing when full
-        try {
-            stack.push(60);
-        } catch (const std::overflow_error &e) {
-            std::cout << "Caught exception: " << e.what() << std::endl;
-        }
+        // Push another element
+        stack.push(60);
+        std::cout << "Push: 60 (size = " << stack.size() << ")" << std::endl;
+        std::cout << "New top element: " << stack.peek() << std::endl;
 
         // Pop all elements
         while (!stack.isEmpty()) {
@@ -38,7 +36,7 @@ int main() {
             std::cout << "Caught exception: " << e.what() << std::endl;
         }
 
-        std::cout << "Test end" << std::endl;
+        std::cout << "LinkedStack Test End" << std::endl;
 
     } catch (const std::exception &e) {
         std::cerr << "Unexpected error: " << e.what() << std::endl;

@@ -17,11 +17,6 @@ namespace datastructures {
         Node(int data) {
             this->data = data;
         }
-
-        Node(int data, std::unique_ptr<Node> next) {
-            this->data = data;
-            this->next = std::move(next);
-        }
     };
 } // datastructures
 

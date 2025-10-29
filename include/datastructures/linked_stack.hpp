@@ -4,9 +4,28 @@
 
 #ifndef INC_408_DATASTRUCTURE_LINKED_STACK_HPP
 #define INC_408_DATASTRUCTURE_LINKED_STACK_HPP
+#include <memory>
 
+#include "node.hpp"
 
-class linked_stack {};
+namespace datastructures {
+    class LinkedStack {
+        std::unique_ptr<Node> topNode;
+        int currentSize;
 
+    public:
+        LinkedStack();
+
+        void push(int);
+
+        int pop();
+
+        int peek() const;
+
+        bool isEmpty() const;
+
+        int size() const;
+    };
+}
 
 #endif //INC_408_DATASTRUCTURE_LINKED_STACK_HPP
