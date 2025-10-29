@@ -20,7 +20,7 @@ namespace datastructures {
         int pop();
 
         int peek() const;
-
+        bool isFull() const;
         bool isEmpty() const;
 
         int size() const;

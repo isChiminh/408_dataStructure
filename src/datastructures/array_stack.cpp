@@ -36,6 +36,10 @@ namespace datastructures {
         return containers[topPosition];
     }
 
+    bool ArrayStack::isFull() const {
+        return topPosition == maxSize - 1;
+    }
+
     bool ArrayStack::isEmpty() const {
         return topPosition == -1;
     }
