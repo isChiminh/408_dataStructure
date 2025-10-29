@@ -10,7 +10,7 @@
 namespace datastructures {
     class LinkedList {
     public:
-        std::unique_ptr<Node> head = nullptr;
+        std::shared_ptr<Node> head = nullptr;
 
         LinkedList();
 
@@ -28,9 +28,9 @@ namespace datastructures {
 
         bool contains(int);
 
-        Node* find(int);
+        std::shared_ptr<Node> find(int);
 
-        Node* locate(int);
+        std::shared_ptr<Node> locate(int);
 
         void print();
 

@@ -10,7 +10,7 @@
 
 namespace datastructures {
     class LinkedStack {
-        std::unique_ptr<Node> topNode;
+        std::shared_ptr<Node> topNode;
         int currentSize;
 
     public:

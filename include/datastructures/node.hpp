@@ -10,7 +10,7 @@ namespace datastructures {
     class Node {
     public:
         int data = 0;
-        std::unique_ptr<Node> next = nullptr;
+        std::shared_ptr<Node> next = nullptr;
 
         Node() = default;
 

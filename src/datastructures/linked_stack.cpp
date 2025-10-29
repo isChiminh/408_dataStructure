@@ -11,9 +11,9 @@ namespace datastructures {
     }
 
     void LinkedStack::push(int val) {
-        auto newTop = std::make_unique<Node>(val);
-        newTop->next = std::move(topNode); // 头插法
-        topNode = std::move(newTop);
+        auto newTop = std::make_shared<Node>(val);
+        newTop->next = topNode; // 头插法
+        topNode = newTop;
         currentSize++;
     }
 
@@ -21,8 +21,9 @@ namespace datastructures {
         if (isEmpty()) {
             throw std::underflow_error("Stack underflow: cannot pop from empty stack");
         }
-        auto d_node = std::move(topNode);
-        topNode = std::move(d_node->next);
+        auto d_node = topNode;
+        topNode = topNode->next;
+        //d_node->next = nullptr;//没必要，函数调用结束d_node会被释放，d_node所指向的那个share_ptr也会被释放
         currentSize--;
         return d_node->data;
     }
