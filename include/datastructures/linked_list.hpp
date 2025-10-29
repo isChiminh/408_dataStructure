@@ -33,6 +33,8 @@ namespace datastructures {
         Node* locate(int);
 
         void print();
+
+        bool isEmpty();
     };
 } // datastructures
 

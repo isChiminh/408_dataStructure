@@ -1,0 +1,12 @@
+//
+// Created by Benson on 2025/10/29.
+//
+
+#ifndef INC_408_DATASTRUCTURE_LINKED_QUEUE_HPP
+#define INC_408_DATASTRUCTURE_LINKED_QUEUE_HPP
+
+
+class linked_queue {};
+
+
+#endif //INC_408_DATASTRUCTURE_LINKED_QUEUE_HPP

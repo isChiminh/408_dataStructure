@@ -7,4 +7,12 @@ add_executable(408_dataStructure main.cpp
         src/datastructures/linked_list.cpp
         include/datastructures/linked_list.hpp
         include/datastructures/node.hpp
+        src/datastructures/array_stack.cpp
+        include/datastructures/array_stack.hpp
+        src/datastructures/linked_stack.cpp
+        include/datastructures/linked_stack.hpp
+        src/datastructures/array_queue.cpp
+        include/datastructures/array_queue.hpp
+        src/datastructures/linked_queue.cpp
+        include/datastructures/linked_queue.hpp
 )

@@ -112,4 +112,10 @@ namespace datastructures {
         }
         std::cout << std::endl;
     }
+
+    bool LinkedList::isEmpty() {
+        if (head->next == nullptr)
+            return true;
+        return false;
+    }
 } // datastructures
