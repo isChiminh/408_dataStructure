@@ -17,5 +17,7 @@ add_executable(408_dataStructure main.cpp
         include/datastructures/linked_queue.hpp
         include/algorithms/bracket_matching.hpp
         src/algorithms/bracket_matching.cpp
+        src/algorithms/expression_utils.cpp
+        include/algorithms/expression_utils.hpp
 
 )

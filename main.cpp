@@ -1,33 +1,29 @@
 #include <iostream>
-#include <string>
-#include "include/algorithms/bracket_matching.hpp"
+
+#include "include/algorithms/expression_utils.hpp"
+using namespace std;
 
 int main() {
-    std::cout << std::boolalpha;  // 打印 true/false
+    string tests[] = {
+        "1+2",
+        "1+2*3",
+        "(1+2)*3",
+        "1+(2*3-4)/5",
+        "8*3+6/2-4",
+        "7*(9-3)/(2+1)"
+    };
 
-    // 空串
-    std::cout << bracketMatching("") << "\n";              // true
+    cout << "Infix to Postfix + Evaluation" << endl;
+    cout << "--------------------------------" << endl;
 
-    // 单一对括号
-    std::cout << bracketMatching("()") << "\n";            // true
-    std::cout << bracketMatching("[]") << "\n";            // true
-    std::cout << bracketMatching("{}") << "\n";            // true
-
-    // 嵌套括号
-    std::cout << bracketMatching("({[]})") << "\n";        // true
-    std::cout << bracketMatching("[({})]") << "\n";        // true
-
-    // 错误顺序
-    std::cout << bracketMatching("(]") << "\n";            // false
-    std::cout << bracketMatching("([)]") << "\n";          // false
-
-    // 多余括号
-    std::cout << bracketMatching("(") << "\n";             // false
-    std::cout << bracketMatching(")") << "\n";             // false
-    std::cout << bracketMatching("((()))(") << "\n";       // false
-
-    // 长串测试
-    std::cout << bracketMatching("({[]}){}[()({})]") << "\n"; // true
+    for (auto &expr : tests) {
+        string postfix = infixToPostfix(expr);
+        int value = evaluatePostfix(postfix);
+        cout << "Infix:    " << expr << endl;
+        cout << "Postfix:  " << postfix << endl;
+        cout << "Value:    " << value << endl;
+        cout << "--------------------------------" << endl;
+    }
 
     return 0;
 }
