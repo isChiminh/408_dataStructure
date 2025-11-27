@@ -7,9 +7,9 @@
 
 #include <string>
 
-int evaluatePrefix(std::string expression);
-int evaluateInfix(std::string expression);
-int evaluatePostfix(std::string expression);
-std::string infixToPostfix(std::string expression);
+int evaluatePrefix(std::string);
+int evaluateInfix(std::string);
+int evaluatePostfix(std::string);
+std::string infixToPostfix(std::string);
 
 #endif //INC_408_DATASTRUCTURE_EXPRESSION_UTILS_HPP

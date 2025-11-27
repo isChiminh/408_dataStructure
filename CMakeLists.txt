@@ -19,5 +19,10 @@ add_executable(408_dataStructure main.cpp
         src/algorithms/bracket_matching.cpp
         src/algorithms/expression_utils.cpp
         include/algorithms/expression_utils.hpp
+        src/algorithms/string_matching.cpp
+        include/algorithms/string_matching.hpp
+        include/datastructures/tree_node.hpp
+        src/algorithms/binary_tree_traversal.cpp
+        include/algorithms/binary_tree_traversal.hpp
 
 )
